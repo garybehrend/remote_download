@@ -10,3 +10,9 @@ Happy to receive comments and feedback regarding improvements.
 
 1. Mac
 2. Hazel (https://www.noodlesoft.com/hazel.php)
+3. Dropbox (http://www.dropbox.com)
+
+##Todo:##
+
+1. Create a logging process - start time and finish time.
+2. Notification process - sms or email (perhaps both).
