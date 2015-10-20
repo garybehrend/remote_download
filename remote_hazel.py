@@ -49,6 +49,6 @@ logging.info(localtime + ' : ' + prog_name + ' : ' + log_action)
 urllib.request.urlretrieve(url, saved_fullpath)
 
 # Log end time
-log_action = 'start'
+log_action = 'finish'
 localtime = time.asctime(time.localtime(time.time()))
 logging.info(localtime + ' : ' + prog_name + ' : ' + log_action)
