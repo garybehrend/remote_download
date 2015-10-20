@@ -15,6 +15,8 @@ Date:   October 19, 2015
 import sys
 import urllib.request
 import os
+import logging
+import time
 
 # read name of file to download
 hazel_infile = sys.argv[1]
@@ -33,7 +35,20 @@ end_pos = len(first_line)
 last_phrase = first_line[start_pos:end_pos]
 
 saved_fullpath = os.path.join(saved_path, last_phrase)
-print("saved_path = " + saved_fullpath)
-print("url = " + url)
 
+# Set up logging variables
+logging.basicConfig(filename='remote_download.log', level=logging.DEBUG)
+prog_name = 'remote_download'
+
+# Log start time
+localtime = time.asctime(time.localtime(time.time()))
+log_action = 'start'
+logging.info(localtime + ' : ' + prog_name + ' : ' + log_action)
+
+# Write to log file
 urllib.request.urlretrieve(url, saved_fullpath)
+
+# Log end time
+log_action = 'start'
+localtime = time.asctime(time.localtime(time.time()))
+logging.info(localtime + ' : ' + prog_name + ' : ' + log_action)
