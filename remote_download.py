@@ -38,7 +38,7 @@ def test_url(url):
 
 def main(url):
     input_url(url)
-    output_path = os.path.expanduser('~/Dropbox/@Action/test.download')
+    output_path = os.path.expanduser('~/Dropbox/@Action/test.dwn')
     print(output_path)
     output_file = open(output_path, 'w')
     output_file.writelines(url)
