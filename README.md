@@ -17,6 +17,7 @@ Happy to receive comments and feedback regarding improvements.
 
 1. ~~Create a logging process - start time and finish time.~~
 2. Notification process - sms, email or twitter.
+3. Implement a config file using json (for mail settings etc)
 3. Add a gui interface
 
 ##Setup:##
