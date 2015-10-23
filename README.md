@@ -14,7 +14,7 @@ Happy to receive comments and feedback regarding improvements.
 
 ##Todo:##
 
-1. Create a logging process - start time and finish time.
+1. ~~Create a logging process - start time and finish time.~~
 2. Notification process - sms, email or twitter.
 3. Add a gui interface
 
