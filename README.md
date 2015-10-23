@@ -11,6 +11,7 @@ Happy to receive comments and feedback regarding improvements.
 1. Mac
 2. Hazel (https://www.noodlesoft.com/hazel.php)
 3. Dropbox (http://www.dropbox.com)
+4. Python 3
 
 ##Todo:##
 
@@ -18,3 +19,14 @@ Happy to receive comments and feedback regarding improvements.
 2. Notification process - sms, email or twitter.
 3. Add a gui interface
 
+##Setup:##
+
+1. On the computers that you wish to remotely set up the downloads you need
+to install dropbox (and create a @action folder). In addition have the
+remote_download.py file to run the program.
+
+2. On server computer also install dropbox. In addition, install hazel.
+
+3. Create a hazel rule to monitor the ~/Dropbox/@Action folder for files
+with an extension of '.dwn' and no tag color of green. This rule when it finds ones, set the tag color to green and initialises the shell command. Set your shell environment to the path of python3. In the shell script put the contents
+of remote_hazel.py
