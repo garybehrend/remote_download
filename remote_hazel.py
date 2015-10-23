@@ -23,18 +23,14 @@ hazel_infile = sys.argv[1]
 file_name = open(hazel_infile, 'r')
 first_line = file_name.readline()
 
-# Download the file from `url`
-url = first_line
+# get variables from file
+input_file = hazel_infile.read()
+url = input_file.splitlines()[0]
+saved_name = input_file.splitlines()[1]
 
+# Formulate path and file name to save
 saved_path = os.path.expanduser('~/hazel_downloads')
-
-# want to find final file name
-find_param = first_line.rfind('/')
-start_pos = find_param + 1
-end_pos = len(first_line)
-last_phrase = first_line[start_pos:end_pos]
-
-saved_fullpath = os.path.join(saved_path, last_phrase)
+saved_fullpath = os.path.join(saved_path, saved_name)
 
 # Set up logging variables
 logging.basicConfig(filename='remote_download.log', level=logging.DEBUG)
