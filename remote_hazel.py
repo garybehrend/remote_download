@@ -20,13 +20,14 @@ import time
 
 # read name of file to download
 hazel_infile = sys.argv[1]
-file_name = open(hazel_infile, 'r')
-first_line = file_name.readline()
+array = []
+with open(hazel_infile, "r") as f:
+    for line in f:
+        array.append(line)
 
 # get variables from file
-input_file = hazel_infile.read()
-url = input_file.splitlines()[0]
-saved_name = input_file.splitlines()[1]
+url = array[0]
+saved_name = array[1]
 
 # Formulate path and file name to save
 saved_path = os.path.expanduser('~/hazel_downloads')
