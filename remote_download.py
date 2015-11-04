@@ -45,14 +45,12 @@ def input_savedname():
 # Output the file into dropbox
 def output_file(url, saved_filename):
     output_extension = '.dwn'
-    prefix_name = 'Remote Download | '
-    date_stamp = time.strftime("%H:%M:%S")
+    prefix_name = 'Remote Download - '
+    date_stamp = time.strftime("%e-%m-%y -- %H-%M-%S")
     output_file = prefix_name + date_stamp + output_extension
     output_path = os.path.expanduser('~/Dropbox/@Action/')
-    output_path = output_path + output_file + output_extension
+    output_path = output_path + output_file
     output_file = open(output_path, 'w')
-    print('url is ' + url)
-    print('saved_filename ' + saved_filename)
     output_file.writelines([url, '\n', saved_filename])
     output_file.close()
     print('added to download queue ...')
