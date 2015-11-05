@@ -18,7 +18,7 @@ import logging
 import datetime
 import json
 import smtplib
-open requests
+import requests
 
 
 class EmailProfile:
