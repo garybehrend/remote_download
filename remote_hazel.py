@@ -13,12 +13,12 @@ Date:   October 19, 2015
 """
 
 import sys
-import urllib.request
 import os
 import logging
 import datetime
 import json
 import smtplib
+open requests
 
 
 class EmailProfile:
@@ -89,7 +89,11 @@ saved_path = os.path.expanduser('~/hazel_downloads/')
 saved_fullpath = os.path.join(saved_path, saved_name)
 
 log(prog_name, 'start')  # Log start time
-urllib.request.urlretrieve(url, saved_fullpath)  # Write to file
+
+r = requests.get(url)
+with open(saved_fullpath, "wb") as code:
+    code.write(r.content)
+
 log(prog_name, 'finish')  # Log end time
 
 """ send email to user notifying of completion"""
